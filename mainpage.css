@@ -1,0 +1,99 @@
+/* Basic resets */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+body::before {
+    content: "";
+    background-image: url("./mainpage_final.jpg");
+    background-size: cover;  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+/* Centering container */
+.container {
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Styling the heading */
+h1 {
+    font-family: 'Dancing Script', cursive;
+    color: rgb(2, 2, 171);
+    font-size: 4rem; /* Default font size */
+    margin-bottom: 20px;
+}
+
+/* Styling the description */
+p.description {
+    font-size: 1.2rem; /* Default font size */
+    color: #333;
+    line-height: 1.5;
+    max-width: 700px;
+    margin-bottom: 40px;
+}
+
+/* Styling the button */
+.start-button {
+    padding: 10px 25px;
+    border-radius: 30px;
+    background-color: rgb(227, 66, 227);
+    border: none;
+    color: white;
+    font-size: 1.1rem; /* Default font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.start-button:hover {
+    background-color: rgb(192, 52, 192);
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem; /* Smaller heading on tablets and phones */
+    }
+
+    p.description {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+
+    .start-button {
+        padding: 10px 20px; /* Adjust button padding */
+        font-size: 1rem; /* Slightly smaller font size */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.5rem; /* Even smaller heading for phones */
+    }
+
+    p.description {
+        font-size: 0.9rem; /* Further reduce font size */
+        margin-bottom: 30px; /* Adjust spacing */
+    }
+
+    .start-button {
+        width: 100%; /* Full width button on smaller devices */
+        padding: 15px; /* Increase padding for touch targets */
+    }
+}
