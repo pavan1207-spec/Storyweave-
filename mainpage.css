@@ -32,6 +32,15 @@ body::before {
     padding: 20px;
 }
 
+.container {
+    position: fixed; 
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    text-align: center; 
+    z-index: 1; 
+}
+
 /* Styling the heading */
 h1 {
     font-family: 'Dancing Script', cursive;
